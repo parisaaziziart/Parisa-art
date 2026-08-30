@@ -28,12 +28,15 @@
   text-align:center;
 }
 .home-hero-content h1{
-  margin:20px 0 26px;
+  margin:20px auto 26px;
+  max-width:700px;
   font-family:"Alan Sans", Arial, sans-serif;
-  font-size:clamp(4.4rem,8vw,7.7rem);
-  line-height:.86;
-  font-weight:500;
-  letter-spacing:-.025em;
+  font-size:clamp(48px,4.8vw,60px);
+  line-height:.94;
+  font-weight:400;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+  color:#896945;
 }
 .home-hero-subtitle{
   max-width:680px;
@@ -135,10 +138,13 @@
   .home-hero-content{width:92%}
   .home-hero-content .eyebrow{font-size:.79rem}
   .home-hero-content h1{
-    font-size:clamp(3.8rem,16vw,5.5rem);
-    line-height:.86;
+    font-size:clamp(2.65rem,11vw,3.5rem);
+    line-height:.95;
     margin:28px 0 34px;
-    letter-spacing:-.035em;
+    letter-spacing:.01em;
+    font-weight:400;
+    text-transform:uppercase;
+    color:#896945;
   }
   .home-hero-subtitle{
     width:92%;
@@ -153,4 +159,19 @@
   .home-story{padding:65px 6%}
   .home-contact{padding:60px 6%}
   .home-contact-inner{grid-template-columns:1fr;gap:35px}
+}
+
+/* Smaller supporting text — main ART MADE WITH EMOTION size stays unchanged */
+.home-hero-content .eyebrow{font-size:.72rem}
+.home-hero-content p{font-size:1.02rem}
+.home-about-strip p{font-size:.96rem}
+.home-collection-info h3{font-size:1.78rem}
+.home-collection-info a{font-size:.72rem}
+.home-contact p{font-size:.96rem}
+
+@media (max-width:760px){
+  .home-hero-content .eyebrow{font-size:.7rem}
+  .home-hero-content p{font-size:.96rem}
+  .home-about-strip p{font-size:.92rem}
+  .home-collection-info h3{font-size:1.6rem}
 }
