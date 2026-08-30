@@ -1,14 +1,19 @@
+/* ALAN SANS - local font files */
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-ExtraBold.ttf") format("truetype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Alan Sans";src:url("fonts/AlanSans-Black.ttf") format("truetype");font-weight:900;font-style:normal;font-display:swap}
+
 /* =========================
    PARISA ART - GLOBAL STYLE
    ========================= */
 
-/* FONT
-   The bold geometric look is League Spartan.
-   It is loaded in the <head> of every HTML page from Google Fonts.
-*/
 :root{
-  --font-display: "League Spartan", Arial, sans-serif;
-  --font-body: "Montserrat", Arial, sans-serif;
+  --font-display: "Alan Sans", Arial, sans-serif;
+  --font-body: "Alan Sans", Arial, sans-serif;
   --bg: #f7f1ea;
   --paper: #fbf7f2;
   --ink: #171412;
@@ -36,8 +41,8 @@ h1,h2,h3,.site-logo,.outline-button,.checkout-button,.add-to-cart{
   font-family:var(--font-display);
 }
 h1,h2,h3{margin-top:0}
-h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;font-weight:700;letter-spacing:-.035em}
-h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1;font-weight:700;letter-spacing:-.025em}
+h1{font-size:clamp(3rem,7vw,6rem);line-height:.9;font-weight:800;letter-spacing:-.055em}
+h2{font-size:clamp(2.2rem,4vw,4rem);line-height:.95;font-weight:800;letter-spacing:-.04em}
 h3{font-size:2rem;line-height:1.05;font-weight:600}
 .eyebrow{
   margin:0 0 16px;

@@ -29,10 +29,11 @@
 }
 .home-hero-content h1{
   margin:20px 0 26px;
-  font-size:clamp(4.2rem,9vw,8rem);
-  line-height:.82;
-  font-weight:700;
-  letter-spacing:-.055em;
+  font-family:"Alan Sans", Arial, sans-serif;
+  font-size:clamp(4.4rem,8vw,7.7rem);
+  line-height:.86;
+  font-weight:800;
+  letter-spacing:-.045em;
 }
 .home-hero-subtitle{
   max-width:680px;
@@ -134,10 +135,10 @@
   .home-hero-content{width:92%}
   .home-hero-content .eyebrow{font-size:.79rem}
   .home-hero-content h1{
-    font-size:clamp(4.25rem,18vw,6rem);
-    line-height:.8;
+    font-size:clamp(3.8rem,16vw,5.5rem);
+    line-height:.86;
     margin:28px 0 34px;
-    letter-spacing:-.055em;
+    letter-spacing:-.035em;
   }
   .home-hero-subtitle{
     width:92%;
