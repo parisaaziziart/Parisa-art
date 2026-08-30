@@ -1,930 +1,155 @@
-/* =========================================
-   HOME PAGE
-========================================= */
+/* =========================
+   HOME PAGE ONLY
+   ========================= */
 
-.home-page {
-    margin: 0;
-    background: #fffaf5 !important;
-    color: #241f1b;
+.home-hero{
+  position:relative;
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.home-hero-background{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  filter:blur(8px);
+  transform:scale(1.04);
+}
+.home-hero-overlay{
+  position:absolute;inset:0;
+  background:rgba(246,238,228,.14);
+}
+.home-hero-content{
+  position:relative;
+  z-index:2;
+  width:min(980px,92%);
+  text-align:center;
+}
+.home-hero-content h1{
+  margin:20px 0 26px;
+  font-size:clamp(4.2rem,9vw,8rem);
+  line-height:.82;
+  font-weight:700;
+  letter-spacing:-.055em;
+}
+.home-hero-subtitle{
+  max-width:680px;
+  margin:0 auto 34px;
+  font-size:1.18rem;
+}
+.home-about-strip{
+  padding:34px 6%;
+  background:#f6eee6;
+  text-align:center;
+}
+.home-about-strip p{max-width:800px;margin:0 auto;font-size:1.05rem}
+
+.home-collections-heading{
+  width:min(1450px,92%);
+  margin:0 auto;
+  padding:70px 0 30px;
+}
+.home-collections-heading h2{margin:0}
+
+.home-collections{
+  width:min(1450px,92%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+  padding-bottom:90px;
+}
+.home-collection-card{
+  text-decoration:none;
+  background:#efe2d5;
+  border:1px solid rgba(0,0,0,.08);
+}
+.home-collection-image{aspect-ratio:4/5;overflow:hidden}
+.home-collection-image img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.home-collection-card:hover img{transform:scale(1.025)}
+.home-collection-info{text-align:center;padding:24px 15px 27px}
+.home-collection-info h3{margin:0 0 10px;font-size:2rem}
+.home-collection-info p{
+  margin:0;
+  font-family:var(--font-display);
+  font-size:.78rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.12em;
 }
 
+/* FIXED STORY SECTION */
+.home-story{
+  padding:95px 6%;
+  background:#f2e9df;
+}
+.home-story-inner{
+  width:min(1100px,100%);
+  margin:0 auto;
+  max-width:760px;
+}
+.home-story h2{
+  margin:0 0 24px;
+  max-width:700px;
+}
+.home-story p:not(.eyebrow){max-width:680px;margin:0;color:#4d433d}
 
-/* =========================================
-   HEADER
-========================================= */
-
-.home-header {
-    height: 86px;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr auto 1fr;
-
-    align-items: center;
-
-    padding: 0 6%;
-
-    background: #f5eee7;
-
-    border-bottom:
-        1px solid #d8cdc2;
-
-    position: relative;
-
-    z-index: 20;
+/* FIXED CONTACT SECTION */
+.home-contact{
+  padding:80px 6%;
+  background:#fbf7f2;
+  border-top:1px solid var(--line);
+}
+.home-contact-inner{
+  width:min(1100px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:70px;
+  align-items:end;
+}
+.home-contact h2{margin:0 0 20px}
+.home-contact-inner p:not(.eyebrow){max-width:600px;margin:0;color:#4d433d}
+.home-contact-details{
+  display:grid;
+  gap:16px;
+  justify-items:start;
+}
+.home-contact-details a{
+  text-decoration:none;
+  border-bottom:1px solid currentColor;
+  font-weight:500;
 }
 
-
-.home-nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
+/* TABLET */
+@media (max-width:1000px){
+  .home-collections{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-
-.home-nav-left {
-    justify-content: flex-start;
-}
-
-
-.home-nav-right {
-    justify-content: flex-end;
-}
-
-
-.home-nav a {
-    position: relative;
-
-    padding: 32px 0 27px;
-
-    color: #28231f;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 500;
-}
-
-
-.home-nav a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 19px;
-
-    width: 0;
-
-    height: 1px;
-
-    background: #28231f;
-
-    transition: width 0.25s ease;
-}
-
-
-.home-nav a:hover::after,
-.home-nav a.active::after {
-    width: 100%;
-}
-
-
-/* =========================================
-   LOGO
-========================================= */
-
-.home-logo {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 11px;
-
-    color: #171310;
-
-    text-decoration: none;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 27px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    white-space: nowrap;
-}
-
-
-.home-logo-image {
-    width: 48px;
-
-    height: 48px;
-
-    display: block;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-}
-
-
-.home-cart {
-    position: relative;
-}
-
-
-.home-cart #cart-count {
-    position: absolute;
-
-    top: 16px;
-
-    right: -22px;
-
-    width: 18px;
-
-    height: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #201a16;
-
-    color: white;
-
-    border-radius: 50%;
-
-    font-size: 9px;
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.home-hero {
-    position: relative;
-
-    min-height: 610px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    text-align: center;
-
-    background: #ddd;
-}
-
-
-.home-hero-background {
-    position: absolute;
-
-    inset: -20px;
-
-    background-image:
-        url("image/Head.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    filter: blur(7px);
-
-    transform: scale(1.06);
-}
-
-
-.home-hero::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        rgba(255, 248, 241, 0.10);
-}
-
-
-.home-hero-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 950px;
-
-    padding: 50px 25px;
-
-    color: #161311;
-}
-
-
-.home-hero-content > p {
-    margin-bottom: 32px;
-
-    font-size: 15px;
-
-    letter-spacing: 1px;
-}
-
-
-.home-hero-content h1 {
-    margin-bottom: 24px;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size:
-        clamp(
-            58px,
-            7vw,
-            90px
-        );
-
-    font-weight: 600;
-
-    line-height: 1;
-}
-
-
-.home-hero-content span {
-    font-size: 16px;
-}
-
-
-/* =========================================
-   ABOUT ME BROWN STRIP
-========================================= */
-
-.about-strip {
-    padding:
-        55px 7%;
-
-    background: #8e6c55;
-
-    color: #fffaf4;
-}
-
-
-.about-strip-inner {
-    width:
-        min(
-            1250px,
-            100%
-        );
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        0.8fr 1.2fr;
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-
-.about-strip-title > p {
-    margin-bottom: 10px;
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-}
-
-
-.about-strip-title h2 {
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 47px;
-
-    font-weight: 500;
-}
-
-
-.about-strip-text p {
-    max-width: 650px;
-
-    margin-bottom: 15px;
-
-    font-size: 14px;
-
-    line-height: 1.9;
-
-    color: #f6eee8;
-}
-
-
-/* =========================================
-   COLLECTION BANNER
-========================================= */
-
-.collection-banner {
-    margin:
-        55px auto 45px;
-
-    width:
-        min(
-            92%,
-            1400px
-        );
-
-    padding:
-        50px 20px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            115deg,
-            #d9c4b2,
-            #f1e4d8,
-            #c8ac95
-        );
-
-    border:
-        1px solid #d5c4b5;
-}
-
-
-.collection-banner > p {
-    margin-bottom: 10px;
-
-    font-size: 10px;
-
-    letter-spacing: 5px;
-}
-
-
-.collection-banner h2 {
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 51px;
-
-    font-weight: 500;
-}
-
-
-.collection-banner span {
-    display: block;
-
-    margin-top: 12px;
-
-    font-size: 13px;
-
-    color: #66584d;
-}
-
-
-/* =========================================
-   FOUR COLLECTIONS
-========================================= */
-
-.home-collections {
-    width:
-        min(
-            1400px,
-            92%
-        );
-
-    margin:
-        0 auto 110px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            4,
-            minmax(0, 1fr)
-        );
-
-    gap: 20px;
-}
-
-
-.home-collection-card {
-    display: block;
-
-    background: #eee2d7;
-
-    border:
-        1px solid #dfd0c3;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease;
-}
-
-
-.home-collection-card:hover {
-    transform:
-        translateY(-5px);
-}
-
-
-.home-collection-image {
-    margin:
-        14px 14px 0;
-
-    overflow: hidden;
-
-    background: #ddd2c8;
-}
-
-
-.home-collection-image img {
-    width: 100%;
-
-    height: 390px;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.45s ease;
-}
-
-
-.home-collection-card:hover
-.home-collection-image img {
-    transform:
-        scale(1.025);
-}
-
-
-.home-collection-info {
-    padding:
-        20px 18px 25px;
-
-    text-align: center;
-
-    color: #2d261f;
-}
-
-
-.home-collection-info p {
-    margin-bottom: 5px;
-
-    color: #89766a;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
-
-
-.home-collection-info h3 {
-    margin-bottom: 20px;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 26px;
-
-    font-weight: 500;
-}
-
-
-.home-collection-info span {
-    display: inline-block;
-
-    padding:
-        11px 22px;
-
-    background: #c5aa94;
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================================
-   ARTIST STORY
-========================================= */
-
-.home-about {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 90px;
-
-    padding:
-        100px 10%;
-
-    background: #f1e7dd;
-}
-
-
-.home-about-left > p {
-    margin-bottom: 17px;
-
-    font-size: 10px;
-
-    letter-spacing: 5px;
-}
-
-
-.home-about-left h2 {
-    max-width: 550px;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 56px;
-
-    font-weight: 500;
-
-    line-height: 1.05;
-}
-
-
-.home-about-right {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-.home-about-right p {
-    max-width: 600px;
-
-    margin-bottom: 17px;
-
-    color: #62574e;
-
-    font-size: 14px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================================
-   CONTACT - WHITE SECTION
-========================================= */
-
-.home-contact-white {
-    padding:
-        105px 10%;
-
-    display: grid;
-
-    grid-template-columns:
-        0.8fr 1.2fr;
-
-    gap: 90px;
-
-    background: #fffaf5;
-
-    color: #2a241f;
-}
-
-
-.contact-white-title > p {
-    margin-bottom: 15px;
-
-    color: #8f7665;
-
-    font-size: 10px;
-
-    letter-spacing: 5px;
-}
-
-
-.contact-white-title h2 {
-    margin: 0;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 55px;
-
-    font-weight: 500;
-}
-
-
-.contact-white-intro {
-    max-width: 650px;
-
-    margin:
-        0 0 35px;
-
-    color: #665a51;
-
-    font-size: 14px;
-
-    line-height: 1.9;
-}
-
-
-.contact-white-row {
-    padding:
-        20px 0;
-
-    border-top:
-        1px solid #d8cdc3;
-}
-
-
-.contact-white-row:last-child {
-    border-bottom:
-        1px solid #d8cdc3;
-}
-
-
-.contact-white-row span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #9b8372;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-}
-
-
-.contact-white-row a {
-    color: #2a241f;
-
-    text-decoration: none;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 22px;
-}
-
-
-.contact-white-row a:hover {
-    opacity: 0.6;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.home-footer {
-    padding:
-        65px 20px;
-
-    text-align: center;
-
-    background: #231f1b;
-
-    color: white;
-}
-
-
-.home-footer-logo {
-    display: inline-block;
-
-    margin-bottom: 30px;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 27px;
-
-    letter-spacing: 4px;
-}
-
-
-.home-footer-links {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 30px;
-
-    margin-bottom: 32px;
-}
-
-
-.home-footer-links a {
-    color: #e9ded4;
-
-    text-decoration: none;
-
-    font-size: 11px;
-}
-
-
-.home-footer > p {
-    color: #b6aaa0;
-
-    font-size: 10px;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media
-(max-width: 1000px) {
-
-    .home-header {
-        grid-template-columns:
-            1fr auto;
-    }
-
-
-    .home-nav-left,
-    .home-nav-right > a:not(.home-cart) {
-        display: none;
-    }
-
-
-    .home-logo {
-        justify-self: start;
-    }
-
-
-    .home-nav-right {
-        justify-self: end;
-    }
-
-
-    .about-strip-inner {
-        grid-template-columns:
-            1fr;
-
-        gap: 30px;
-    }
-
-
-    .home-collections {
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-    }
-
-
-    .home-collection-image img {
-        height: 470px;
-    }
-
-
-    .home-about,
-    .home-contact-white {
-        grid-template-columns:
-            1fr;
-
-        gap: 40px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media
-(max-width: 650px) {
-
-    .home-header {
-        height: 72px;
-
-        padding:
-            0 20px;
-    }
-
-
-    .home-logo {
-        font-size: 19px;
-
-        gap: 8px;
-    }
-
-
-    .home-logo-image {
-        width: 38px;
-
-        height: 38px;
-    }
-
-
-    .home-hero {
-        min-height: 480px;
-    }
-
-
-    .home-hero-content h1 {
-        font-size: 51px;
-    }
-
-
-    .home-hero-content span {
-        font-size: 13px;
-    }
-
-
-    .about-strip {
-        padding:
-            50px 25px;
-    }
-
-
-    .about-strip-title h2 {
-        font-size: 40px;
-    }
-
-
-    .collection-banner {
-        margin-top: 30px;
-    }
-
-
-    .collection-banner h2 {
-        font-size: 40px;
-    }
-
-
-    .home-collections {
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .home-collection-image img {
-        height: 500px;
-    }
-
-
-    .home-about {
-        padding:
-            75px 25px;
-    }
-
-
-    .home-about-left h2 {
-        font-size: 43px;
-    }
-
-
-    .home-contact-white {
-        padding:
-            75px 25px;
-    }
-
-
-    .contact-white-title h2 {
-        font-size: 43px;
-    }
-
-
-    .contact-white-row a {
-        font-size: 17px;
-    }
-
+/* MOBILE */
+@media (max-width:650px){
+  .home-hero{min-height:790px}
+  .home-hero-content{width:92%}
+  .home-hero-content .eyebrow{font-size:.79rem}
+  .home-hero-content h1{
+    font-size:clamp(4.25rem,18vw,6rem);
+    line-height:.8;
+    margin:28px 0 34px;
+    letter-spacing:-.055em;
+  }
+  .home-hero-subtitle{
+    width:92%;
+    font-size:1.08rem;
+    line-height:1.55;
+    margin-bottom:34px;
+  }
+  .outline-button{padding:14px 18px 12px}
+  .home-about-strip{padding:25px 6%}
+  .home-collections-heading{padding-top:44px}
+  .home-collections{grid-template-columns:1fr;padding-bottom:65px}
+  .home-story{padding:65px 6%}
+  .home-contact{padding:60px 6%}
+  .home-contact-inner{grid-template-columns:1fr;gap:35px}
 }

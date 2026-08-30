@@ -1,579 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>A Story Behind Every Painting | Parisa Art</title>
-
-    <link rel="icon" type="image/png" href="image/Icon.png">
-    <link rel="apple-touch-icon" href="image/Icon.png">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            background: #f4efe8;
-            color: #171310;
-            font-family: "Montserrat", sans-serif;
-        }
-
-        .story-page {
-            min-height: 100vh;
-        }
-
-        .story-hero {
-            text-align: center;
-            padding: 105px 7% 75px;
-        }
-
-        .story-eyebrow {
-            margin: 0 0 20px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #795f50;
-        }
-
-        .story-title {
-            max-width: 850px;
-            margin: 0 auto 28px;
-            font-family: "Playfair Display", serif;
-            font-size: 58px;
-            line-height: 1.12;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .story-intro {
-            max-width: 650px;
-            margin: 0 auto;
-            font-family: "Playfair Display", serif;
-            font-size: 21px;
-            line-height: 1.7;
-            font-style: italic;
-            color: #665249;
-        }
-
-        .story-divider {
-            width: 60px;
-            height: 1px;
-            background: #8c7568;
-            margin: 50px auto 0;
-        }
-
-        .story-content {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 20px 7% 120px;
-        }
-
-        .story-content p {
-            margin: 0 0 27px;
-            font-size: 16px;
-            line-height: 2;
-            color: #302a26;
-        }
-
-        .story-content strong {
-            font-weight: 600;
-        }
-
-        .story-chapters {
-            text-align: center;
-            margin: 55px 0;
-            padding: 42px 25px;
-            border-top: 1px solid rgba(80, 60, 50, 0.22);
-            border-bottom: 1px solid rgba(80, 60, 50, 0.22);
-        }
-
-        .story-chapters span {
-            display: inline-block;
-            margin: 6px 14px;
-            font-family: "Playfair Display", serif;
-            font-size: 28px;
-            color: #4c382e;
-        }
-
-        .chapter-title {
-            margin: 70px 0 28px;
-            font-family: "Playfair Display", serif;
-            font-size: 40px;
-            font-weight: 500;
-            color: #4c382e;
-        }
-
-        .story-quote {
-            margin: 55px 0;
-            padding: 10px 0 10px 32px;
-            border-left: 2px solid #8c7568;
-            font-family: "Playfair Display", serif;
-            font-size: 27px;
-            line-height: 1.6;
-            color: #584238;
-        }
-
-        .story-ending {
-            margin-top: 70px;
-            text-align: center;
-        }
-
-        .story-ending p {
-            font-family: "Playfair Display", serif;
-            font-size: 23px;
-            line-height: 1.8;
-            color: #49372e;
-        }
-
-        .story-final-chapters {
-            margin: 45px 0;
-        }
-
-        .story-final-chapters div {
-            font-family: "Playfair Display", serif;
-            font-size: 35px;
-            line-height: 1.55;
-            color: #3d2d26;
-        }
-
-        .story-signature {
-            margin-top: 55px;
-            font-family: "Playfair Display", serif;
-            font-size: 28px;
-            color: #72584a;
-        }
-
-        .story-footer {
-            background: #2f211b;
-            color: #f4efe8;
-            padding: 45px 6%;
-            text-align: center;
-        }
-
-        .story-footer p {
-            margin: 8px 0;
-            font-size: 14px;
-        }
-
-        .story-footer a {
-            color: #f4efe8;
-            text-decoration: none;
-        }
-
-        @media (max-width: 900px) {
-            .story-hero {
-                padding-top: 75px;
-            }
-
-            .story-title {
-                font-size: 46px;
-            }
-
-            .chapter-title {
-                font-size: 35px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .story-hero {
-                padding: 60px 7% 50px;
-            }
-
-            .story-title {
-                font-size: 37px;
-            }
-
-            .story-intro {
-                font-size: 18px;
-            }
-
-            .story-content {
-                padding: 10px 7% 85px;
-            }
-
-            .story-content p {
-                font-size: 15px;
-                line-height: 1.9;
-            }
-
-            .chapter-title {
-                margin-top: 55px;
-                font-size: 31px;
-            }
-
-            .story-quote {
-                padding-left: 20px;
-                font-size: 23px;
-            }
-
-            .story-chapters span {
-                display: block;
-                font-size: 25px;
-            }
-
-            .story-final-chapters div {
-                font-size: 29px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Story Behind Every Painting | Parisa Art</title>
+  <meta name="description" content="The story behind Parisa Art and the Woman, Nature, Ink and Ocean collections.">
+  <link rel="icon" type="image/png" href="image/Icon.png">
+  <link rel="apple-touch-icon" href="image/Icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="story-page">
-
-<header class="home-header">
-
-    <nav class="home-nav home-nav-left">
-        <a href="index.html">Home</a>
-        <a href="woman.html">Woman</a>
-        <a href="nature.html">Nature</a>
-    </nav>
-
-    <a href="index.html" class="home-logo">
-        <img src="image/Icon.png" alt="Parisa Art Logo" class="home-logo-image">
-        <span>PARISA ART</span>
-    </a>
-
-    <nav class="home-nav home-nav-right">
-        <a href="ocean.html">Ocean</a>
-        <a href="ink.html">Ink</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="cart.html" class="home-cart">
-            Cart <span id="cart-count">0</span>
-        </a>
-    </nav>
-
+<body>
+<header class="site-header">
+  <button class="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="site-nav site-nav-left"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html">Nature</a></nav>
+  <a href="index.html" class="site-logo"><img src="image/Icon.png" alt="Parisa Art logo"><span>PARISA ART</span></a>
+  <nav class="site-nav site-nav-right"><a href="ocean.html">Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html" class="active">Story</a><a href="index.html#contact">Contact</a></nav>
+  <a href="cart.html" class="site-cart">Cart <span id="cart-count">0</span></a>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html">Nature</a><a href="ocean.html">Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html">Story</a><a href="index.html#contact">Contact</a><a href="cart.html">Cart</a></div>
 </header>
 
-
-<main>
-
-    <section class="story-hero">
-
-        <p class="story-eyebrow">The Journey Behind The Work</p>
-
-        <h1 class="story-title">
-            A Story Behind Every Painting
-        </h1>
-
-        <p class="story-intro">
-            Four chapters of the same journey — through the body,
-            the mind, nature, fear, and surrender.
-        </p>
-
-        <div class="story-divider"></div>
-
-    </section>
-
-
-    <article class="story-content">
-
-        <p>I recently updated my website.</p>
-
-        <p>
-            But for me, this update is not simply about adding new work.
-            It feels more like finally putting the pieces of a journey together —
-            a journey that has been unfolding since 2021.
-        </p>
-
-
-        <div class="story-chapters">
-            <span>Woman.</span>
-            <span>Nature.</span>
-            <span>Ink.</span>
-            <span>Ocean.</span>
-        </div>
-
-
-        <p>
-            They may look like four different bodies of work, but to me,
-            they have never really been separate.
-            Each one was born from the one before it.
-        </p>
-
-        <p>
-            My story began in 2021, after I graduated and started working
-            at a photography studio.
-        </p>
-
-        <p>
-            My main role there was graphic design, but I was surrounded by
-            photography every day — commercial projects, hotels, portraits,
-            and different kinds of artistic work.
-        </p>
-
-        <p>
-            There was one part of the photographer’s work that particularly
-            caught my attention: his photographs of the female body.
-        </p>
-
-        <p>
-            What fascinated me was the way he looked at women.
-        </p>
-
-        <p>
-            He tried to remove the female body from a purely sexual context
-            and instead connect it to nature — to the shapes of the earth,
-            organic forms, and the idea of Mother Earth.
-        </p>
-
-
-        <div class="story-quote">
-            The body was not simply something to desire.<br><br>
-            It could be a landscape.<br>
-            A form.<br>
-            A piece of art.
-        </div>
-
-
-        <p>
-            Something about that perspective stayed with me.
-        </p>
-
-        <p>
-            And slowly, it began to change the way I saw the female body too.
-        </p>
-
-        <p>
-            When I later moved to Milan, I continued exploring that idea
-            in my own way. Alongside my professional work, I started creating
-            digital paintings centered around the female body.
-        </p>
-
-
-        <h2 class="chapter-title">Woman.</h2>
-
-        <p>
-            That became <strong>Woman</strong>.
-        </p>
-
-        <p>
-            But Woman naturally led me somewhere else.
-        </p>
-
-        <p>
-            If the female body could remind me of the earth, I began to wonder
-            if nature itself could also be seen as a body.
-        </p>
-
-        <p>
-            During my travels, I started photographing landscapes, textures,
-            plants, mountains, and different forms I found in nature.
-            I would later transform those photographs through digital painting.
-        </p>
-
-
-        <h2 class="chapter-title">Nature.</h2>
-
-        <p>
-            That exploration became <strong>Nature</strong>.
-        </p>
-
-        <p>
-            Then, at some point, my attention shifted from the world outside
-            of me to the world inside.
-        </p>
-
-        <p>
-            I went through a period of a few months when meditation became
-            an important part of my life.
-        </p>
-
-        <p>
-            I became fascinated by the contrast between silence and everything
-            happening underneath it.
-        </p>
-
-
-        <div class="story-quote">
-            How can the body be completely still while the mind is moving constantly?
-        </div>
-
-
-        <p>
-            Thoughts, memories, emotions, noise — all existing inside what
-            appears to be silence.
-        </p>
-
-
-        <h2 class="chapter-title">Ink.</h2>
-
-        <p>
-            That inner landscape became <strong>Ink</strong>.
-        </p>
-
-        <p>
-            And then came the most personal chapter of this journey.
-        </p>
-
-
-        <h2 class="chapter-title">Ocean.</h2>
-
-        <p>
-            <strong>Ocean.</strong>
-        </p>
-
-        <p>
-            For a long time, one of my deepest fears has been swimming —
-            being in deep water, surrendering my body to something I cannot
-            completely control.
-        </p>
-
-        <p>
-            Through therapy and through confronting that fear, my relationship
-            with the ocean slowly began to change.
-        </p>
-
-        <p>
-            I started seeing the ocean not simply as water, but as part of
-            Mother Earth.
-        </p>
-
-
-        <div class="story-quote">
-            Almost like a womb.<br><br>
-            A vast space that holds life, surrounds it, and gives birth to it.
-        </div>
-
-
-        <p>
-            And I realized that perhaps my fear of the ocean was asking me
-            to confront something much deeper.
-        </p>
-
-        <p>
-            My relationship with my own body.
-        </p>
-
-        <p>
-            To enter the water, I first had to learn how to make peace with
-            my body — to trust it, to surrender, and to allow it to exist
-            without constantly trying to control it.
-        </p>
-
-        <p>
-            That realization became the beginning of <strong>Ocean</strong>.
-        </p>
-
-        <p>
-            And somehow, after all of this, I found myself returning to where
-            everything had started:
-        </p>
-
-
-        <div class="story-quote">
-            the female body.
-        </div>
-
-
-        <p>
-            The more I painted women, the more my understanding of the female
-            body changed.
-        </p>
-
-        <p>
-            It began to feel sacred to me.
-        </p>
-
-        <p>
-            Not simply beautiful, and certainly not something whose value
-            exists only through sexuality, but something connected to creation,
-            nature, life, and a kind of ancient sacredness.
-        </p>
-
-        <p>
-            I began to think of the woman almost as a temple — something to be
-            approached with reverence, something to be honored.
-        </p>
-
-        <p>
-            But that is another story on its own, and one I want to speak
-            about separately.
-        </p>
-
-        <p>
-            For now, I simply wanted to share how this journey began.
-        </p>
-
-
-        <div class="story-ending">
-
-            <p>
-                From a photography studio in 2021,<br>
-                to the female body.
-            </p>
-
-            <p>
-                From the female body,<br>
-                to nature.
-            </p>
-
-            <p>
-                From nature,<br>
-                to the mind.
-            </p>
-
-            <p>
-                And from the mind,<br>
-                to the ocean.
-            </p>
-
-
-            <div class="story-final-chapters">
-                <div>Woman.</div>
-                <div>Nature.</div>
-                <div>Ink.</div>
-                <div>Ocean.</div>
-            </div>
-
-
-            <p>
-                Four chapters of the same journey.
-            </p>
-
-            <p>
-                A journey through the body, the mind, nature, fear,
-                surrender, and my own understanding of what it means to be alive.
-            </p>
-
-            <p>
-                And I think I am still somewhere in the middle of it.
-            </p>
-
-            <div class="story-signature">
-                Parisa
-            </div>
-
-        </div>
-
-    </article>
-
+<main class="story-page-shell">
+  <section class="story-hero">
+    <p class="eyebrow">THE JOURNEY BEHIND THE WORK</p>
+    <h1>A Story Behind Every Painting</h1>
+    <p class="story-lead">Four chapters of the same journey — through the body, the mind, nature, fear, and surrender.</p>
+  </section>
+
+  <article class="story-article">
+    <p>I recently updated my website.</p>
+<p>But for me, this update is not simply about adding new work. It feels more like finally putting the pieces of a journey together — a journey that has been unfolding since 2021.</p>
+<div class="story-chapters"><span>Woman.</span><span>Nature.</span><span>Ink.</span><span>Ocean.</span></div>
+<p>They may look like four different bodies of work, but to me, they have never really been separate. Each one was born from the one before it.</p>
+<p>My story began in 2021, after I graduated and started working at a photography studio.</p>
+<p>My main role there was graphic design, but I was surrounded by photography every day — commercial projects, hotels, portraits, and different kinds of artistic work.</p>
+<p>There was one part of the photographer’s work that particularly caught my attention: his photographs of the female body.</p>
+<p>What fascinated me was the way he looked at women.</p>
+<p>He tried to remove the female body from a purely sexual context and instead connect it to nature — to the shapes of the earth, organic forms, and the idea of Mother Earth.</p>
+<blockquote>The body was not simply something to desire.<br>It could be a landscape.<br>A form.<br>A piece of art.</blockquote>
+<p>Something about that perspective stayed with me.</p>
+<p>And slowly, it began to change the way I saw the female body too.</p>
+<p>When I later moved to Milan, I continued exploring that idea in my own way. Alongside my professional work, I started creating digital paintings centered around the female body.</p>
+<h2 class="story-section-title">Woman.</h2>
+<p>That became <strong>Woman</strong>.</p>
+<p>But Woman naturally led me somewhere else.</p>
+<p>If the female body could remind me of the earth, I began to wonder if nature itself could also be seen as a body.</p>
+<p>During my travels, I started photographing landscapes, textures, plants, mountains, and different forms I found in nature. I would later transform those photographs through digital painting.</p>
+<h2 class="story-section-title">Nature.</h2>
+<p>That exploration became <strong>Nature</strong>.</p>
+<p>Then, at some point, my attention shifted from the world outside of me to the world inside.</p>
+<p>I went through a period of a few months when meditation became an important part of my life.</p>
+<p>I became fascinated by the contrast between silence and everything happening underneath it.</p>
+<blockquote>How can the body be completely still while the mind is moving constantly?</blockquote>
+<p>Thoughts, memories, emotions, noise — all existing inside what appears to be silence.</p>
+<h2 class="story-section-title">Ink.</h2>
+<p>That inner landscape became <strong>Ink</strong>.</p>
+<p>And then came the most personal chapter of this journey.</p>
+<h2 class="story-section-title">Ocean.</h2>
+<p><strong>Ocean.</strong></p>
+<p>For a long time, one of my deepest fears has been swimming — being in deep water, surrendering my body to something I cannot completely control.</p>
+<p>Through therapy and through confronting that fear, my relationship with the ocean slowly began to change.</p>
+<p>I started seeing the ocean not simply as water, but as part of Mother Earth.</p>
+<blockquote>Almost like a womb.<br>A vast space that holds life, surrounds it, and gives birth to it.</blockquote>
+<p>And I realized that perhaps my fear of the ocean was asking me to confront something much deeper.</p>
+<p>My relationship with my own body.</p>
+<p>To enter the water, I first had to learn how to make peace with my body — to trust it, to surrender, and to allow it to exist without constantly trying to control it.</p>
+<p>That realization became the beginning of <strong>Ocean</strong>.</p>
+<p>And somehow, after all of this, I found myself returning to where everything had started:</p>
+<blockquote>the female body.</blockquote>
+<p>The more I painted women, the more my understanding of the female body changed.</p>
+<p>It began to feel sacred to me.</p>
+<p>Not simply beautiful, and certainly not something whose value exists only through sexuality, but something connected to creation, nature, life, and a kind of ancient sacredness.</p>
+<p>I began to think of the woman almost as a temple — something to be approached with reverence, something to be honored.</p>
+<p>But that is another story on its own, and one I want to speak about separately.</p>
+<p>For now, I simply wanted to share how this journey began.</p>
+<div class="story-ending">
+<p>From a photography studio in 2021,<br>to the female body.</p>
+<p>From the female body,<br>to nature.</p>
+<p>From nature,<br>to the mind.</p>
+<p>And from the mind,<br>to the ocean.</p>
+<div class="story-final-chapters"><span>Woman.</span><span>Nature.</span><span>Ink.</span><span>Ocean.</span></div>
+<p>Four chapters of the same journey.</p>
+<p>A journey through the body, the mind, nature, fear, surrender, and my own understanding of what it means to be alive.</p>
+<p>And I think I am still somewhere in the middle of it.</p>
+</div>
+  </article>
 </main>
 
-
-<footer class="story-footer">
-
-    <p>© 2026 Parisa Art</p>
-
-    <p>
-        <a href="mailto:Parisaazizi.it@gmail.com">
-            Parisaazizi.it@gmail.com
-        </a>
-    </p>
-
-</footer>
-
-
+<footer class="site-footer">© 2026 Parisa Art</footer>
 <script src="script.js"></script>
-
 </body>
 </html>

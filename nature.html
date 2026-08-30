@@ -1,94 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Nature Collection | Parisa Art</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature | Parisa Art</title>
+  <meta name="description" content="Landscapes and places transformed through digital painting, memory, texture and emotion.">
+  <link rel="icon" type="image/png" href="image/Icon.png">
+  <link rel="apple-touch-icon" href="image/Icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+<header class="site-header">
+  <button class="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="site-nav site-nav-left"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html" class='active'>Nature</a></nav>
+  <a href="index.html" class="site-logo"><img src="image/Icon.png" alt="Parisa Art logo"><span>PARISA ART</span></a>
+  <nav class="site-nav site-nav-right"><a href="ocean.html">Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html">Story</a><a href="index.html#contact">Contact</a></nav>
+  <a href="cart.html" class="site-cart">Cart <span id="cart-count">0</span></a>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html">Nature</a><a href="ocean.html">Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html">Story</a><a href="index.html#contact">Contact</a><a href="cart.html">Cart</a></div>
+</header>
 
-<body data-category="nature">
+<main>
+  <section class="collection-hero">
+    <p class="eyebrow">PARISA ART COLLECTION</p>
+    <h1>Nature</h1>
+    <p>Landscapes and places transformed through digital painting, memory, texture and emotion.</p>
+  </section>
+  <section class="art-grid">
+    <article class="art-card">
+  <div class="art-image-wrap"><img src="image/beautiful-shot-oresund-bridge-with-cars-sweden.jpg" alt="Oresund Bridge" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Oresund Bridge</h2><p class="price">€650</p></div>
+    <button class="add-to-cart" data-name="Oresund Bridge" data-image="image/beautiful-shot-oresund-bridge-with-cars-sweden.jpg" data-price="650" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/beautiful-shot-pont-des-arts-institute-de-france-paris-france.jpg" alt="Pont des Arts" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Pont des Arts</h2><p class="price">€700</p></div>
+    <button class="add-to-cart" data-name="Pont des Arts" data-image="image/beautiful-shot-pont-des-arts-institute-de-france-paris-france.jpg" data-price="700" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Boat.jpg" alt="Boat" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Boat</h2><p class="price">€620</p></div>
+    <button class="add-to-cart" data-name="Boat" data-image="image/Boat.jpg" data-price="620" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><span class="sold-badge">SOLD OUT</span><img src="image/Bratislava.jpg" alt="Bratislava" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Bratislava</h2><p class="price">€3,000</p></div>
+    <button class="add-to-cart" data-name="Bratislava" data-image="image/Bratislava.jpg" data-price="3000" data-sold="true" disabled aria-disabled="true">Sold Out</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><span class="sold-badge">SOLD OUT</span><img src="image/Copenhagen.jpg" alt="Copenhagen" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Copenhagen</h2><p class="price">€3,000</p></div>
+    <button class="add-to-cart" data-name="Copenhagen" data-image="image/Copenhagen.jpg" data-price="3000" data-sold="true" disabled aria-disabled="true">Sold Out</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Fall in Frankfort-no 1.jpg" alt="Fall in Frankfort no 1" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Fall in Frankfort no 1</h2><p class="price">€680</p></div>
+    <button class="add-to-cart" data-name="Fall in Frankfort no 1" data-image="image/Fall in Frankfort-no 1.jpg" data-price="680" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Fall in Frankfort-no 2.jpg" alt="Fall in Frankfort no 2" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Fall in Frankfort no 2</h2><p class="price">€720</p></div>
+    <button class="add-to-cart" data-name="Fall in Frankfort no 2" data-image="image/Fall in Frankfort-no 2.jpg" data-price="720" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Fall in Frankfort-no 4.jpg" alt="Fall in Frankfort no 4" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Fall in Frankfort no 4</h2><p class="price">€740</p></div>
+    <button class="add-to-cart" data-name="Fall in Frankfort no 4" data-image="image/Fall in Frankfort-no 4.jpg" data-price="740" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Frankfurt.jpg" alt="Frankfurt" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Frankfurt</h2><p class="price">€760</p></div>
+    <button class="add-to-cart" data-name="Frankfurt" data-image="image/Frankfurt.jpg" data-price="760" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Leaving.jpg" alt="Leaving" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Leaving</h2><p class="price">€690</p></div>
+    <button class="add-to-cart" data-name="Leaving" data-image="image/Leaving.jpg" data-price="690" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Nostalgia.jpg" alt="Nostalgia" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Nostalgia</h2><p class="price">€810</p></div>
+    <button class="add-to-cart" data-name="Nostalgia" data-image="image/Nostalgia.jpg" data-price="810" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Paris.jpg" alt="Paris" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Paris</h2><p class="price">€850</p></div>
+    <button class="add-to-cart" data-name="Paris" data-image="image/Paris.jpg" data-price="850" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><span class="sold-badge">SOLD OUT</span><img src="image/Salzburg night.jpg" alt="Salzburg night" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Salzburg night</h2><p class="price">€2,500</p></div>
+    <button class="add-to-cart" data-name="Salzburg night" data-image="image/Salzburg night.jpg" data-price="2500" data-sold="true" disabled aria-disabled="true">Sold Out</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Sunset.jpg" alt="Sunset" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Sunset</h2><p class="price">€670</p></div>
+    <button class="add-to-cart" data-name="Sunset" data-image="image/Sunset.jpg" data-price="670" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Venice.jpg" alt="Venice" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Venice</h2><p class="price">€820</p></div>
+    <button class="add-to-cart" data-name="Venice" data-image="image/Venice.jpg" data-price="820" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/zurich-1.jpg" alt="zurich-1" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>zurich-1</h2><p class="price">€710</p></div>
+    <button class="add-to-cart" data-name="zurich-1" data-image="image/zurich-1.jpg" data-price="710" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/zurich-2.jpg" alt="zurich-2" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>zurich-2</h2><p class="price">€730</p></div>
+    <button class="add-to-cart" data-name="zurich-2" data-image="image/zurich-2.jpg" data-price="730" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+  </section>
+</main>
 
-    <header class="site-header">
-
-        <a href="index.html" class="logo">
-            PARISA ART
-        </a>
-
-        <nav class="main-nav">
-
-            <a href="index.html">HOME</a>
-            <a href="woman.html">WOMAN</a>
-            <a href="nature.html">NATURE</a>
-            <a href="ocean.html">OCEAN</a>
-            <a href="ink.html">INK</a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-            CART
-            <span id="cart-count">0</span>
-        </a>
-
-    </header>
-
-
-    <section class="collection-header">
-
-        <p class="eyebrow">
-            PARISA ART
-        </p>
-
-        <h1>
-            Nature Collection
-        </h1>
-
-        <p>
-            Paintings inspired by places,
-            cities, landscapes and travel.
-        </p>
-
-    </section>
-
-
-    <main class="collection-container">
-
-        <div
-            class="art-grid"
-            id="art-grid"
-        >
-        </div>
-
-    </main>
-
-
-    <footer>
-
-        <div class="footer-logo">
-            PARISA ART
-        </div>
-
-        <p>
-            Original paintings by Parisa
-        </p>
-
-        <p>
-            © 2026 Parisa Art. All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+<footer class="site-footer">© 2026 Parisa Art</footer>
+<script src="script.js"></script>
 </body>
-
 </html>

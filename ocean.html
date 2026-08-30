@@ -1,94 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ocean Collection | Parisa Art</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean | Parisa Art</title>
+  <meta name="description" content="A personal exploration of water, fear, surrender, trust and the body.">
+  <link rel="icon" type="image/png" href="image/Icon.png">
+  <link rel="apple-touch-icon" href="image/Icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+<header class="site-header">
+  <button class="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="site-nav site-nav-left"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html">Nature</a></nav>
+  <a href="index.html" class="site-logo"><img src="image/Icon.png" alt="Parisa Art logo"><span>PARISA ART</span></a>
+  <nav class="site-nav site-nav-right"><a href="ocean.html" class='active'>Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html">Story</a><a href="index.html#contact">Contact</a></nav>
+  <a href="cart.html" class="site-cart">Cart <span id="cart-count">0</span></a>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="woman.html">Woman</a><a href="nature.html">Nature</a><a href="ocean.html">Ocean</a><a href="ink.html">Ink</a><a href="about.html">About</a><a href="story.html">Story</a><a href="index.html#contact">Contact</a><a href="cart.html">Cart</a></div>
+</header>
 
-<body data-category="ocean">
+<main>
+  <section class="collection-hero">
+    <p class="eyebrow">PARISA ART COLLECTION</p>
+    <h1>Ocean</h1>
+    <p>A personal exploration of water, fear, surrender, trust and the body.</p>
+  </section>
+  <section class="art-grid">
+    <article class="art-card">
+  <div class="art-image-wrap"><img src="image/Ocean 1.jpg" alt="Ocean 1" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Ocean 1</h2><p class="price">€780</p></div>
+    <button class="add-to-cart" data-name="Ocean 1" data-image="image/Ocean 1.jpg" data-price="780" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Ocean 2.jpg" alt="Ocean 2" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Ocean 2</h2><p class="price">€840</p></div>
+    <button class="add-to-cart" data-name="Ocean 2" data-image="image/Ocean 2.jpg" data-price="840" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+<article class="art-card">
+  <div class="art-image-wrap"><img src="image/Ocean 3.jpg" alt="Ocean 3" loading="lazy"></div>
+  <div class="art-card-info">
+    <div><h2>Ocean 3</h2><p class="price">€890</p></div>
+    <button class="add-to-cart" data-name="Ocean 3" data-image="image/Ocean 3.jpg" data-price="890" data-sold="false">Add to Cart</button>
+  </div>
+</article>
+  </section>
+</main>
 
-    <header class="site-header">
-
-        <a href="index.html" class="logo">
-            PARISA ART
-        </a>
-
-        <nav class="main-nav">
-
-            <a href="index.html">HOME</a>
-            <a href="woman.html">WOMAN</a>
-            <a href="nature.html">NATURE</a>
-            <a href="ocean.html">OCEAN</a>
-            <a href="ink.html">INK</a>
-
-        </nav>
-
-        <a href="cart.html" class="cart-link">
-            CART
-            <span id="cart-count">0</span>
-        </a>
-
-    </header>
-
-
-    <section class="collection-header">
-
-        <p class="eyebrow">
-            PARISA ART
-        </p>
-
-        <h1>
-            Ocean Collection
-        </h1>
-
-        <p>
-            Original works inspired by water,
-            waves, movement and silence.
-        </p>
-
-    </section>
-
-
-    <main class="collection-container">
-
-        <div
-            class="art-grid"
-            id="art-grid"
-        >
-        </div>
-
-    </main>
-
-
-    <footer>
-
-        <div class="footer-logo">
-            PARISA ART
-        </div>
-
-        <p>
-            Original paintings by Parisa
-        </p>
-
-        <p>
-            © 2026 Parisa Art. All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+<footer class="site-footer">© 2026 Parisa Art</footer>
+<script src="script.js"></script>
 </body>
-
 </html>

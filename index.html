@@ -1,286 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parisa Art</title>
+  <meta name="description" content="Original digital paintings by Parisa Azizi across Woman, Nature, Ink and Ocean collections.">
+  <link rel="icon" type="image/png" href="image/Icon.png">
+  <link rel="apple-touch-icon" href="image/Icon.png">
 
-    <title>Parisa Art</title>
+  <!-- FONT: League Spartan gives the bold geometric look you asked for -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="image/Icon.png">
-    <link rel="apple-touch-icon" href="image/Icon.png">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-
 <body class="home-page">
 
-<header class="home-header">
+<header class="site-header">
+  <button class="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
-    <nav class="home-nav home-nav-left">
-        <a href="index.html" class="active">Home</a>
-        <a href="woman.html">Woman</a>
-        <a href="nature.html">Nature</a>
-    </nav>
+  <nav class="site-nav site-nav-left">
+    <a href="index.html" class="active">Home</a>
+    <a href="woman.html">Woman</a>
+    <a href="nature.html">Nature</a>
+  </nav>
 
-    <a href="index.html" class="home-logo">
-        <img src="image/Icon.png"
-             alt="Parisa Art Logo"
-             class="home-logo-image">
-        <span>PARISA ART</span>
-    </a>
+  <a href="index.html" class="site-logo">
+    <img src="image/Icon.png" alt="Parisa Art logo">
+    <span>PARISA ART</span>
+  </a>
 
-    <nav class="home-nav home-nav-right">
-        <a href="ocean.html">Ocean</a>
-        <a href="ink.html">Ink</a>
+  <nav class="site-nav site-nav-right">
+    <a href="ocean.html">Ocean</a>
+    <a href="ink.html">Ink</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <!-- NEW PAGES -->
-        <a href="about.html">About</a>
-        <a href="story.html">Story</a>
+  <a href="cart.html" class="site-cart">Cart <span id="cart-count">0</span></a>
 
-        <a href="#contact">Contact</a>
-
-        <a href="cart.html" class="home-cart">
-            Cart <span id="cart-count">0</span>
-        </a>
-    </nav>
-
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="woman.html">Woman</a>
+    <a href="nature.html">Nature</a>
+    <a href="ocean.html">Ocean</a>
+    <a href="ink.html">Ink</a>
+    <a href="about.html">About</a>
+    <a href="story.html">Story</a>
+    <a href="#contact">Contact</a>
+    <a href="cart.html">Cart</a>
+  </div>
 </header>
 
-
 <main>
-
-    <!-- HERO -->
-    <section class="home-hero">
-
-        <div class="home-hero-background"
-             style="background-image: url('image/Head.jpg');">
-        </div>
-
-        <div class="home-hero-overlay"></div>
-
-        <div class="home-hero-content">
-
-            <p class="home-hero-eyebrow">
-                ORIGINAL ART BY PARISA
-            </p>
-
-            <h1>
-                Art Made With Emotion
-            </h1>
-
-            <p class="home-hero-subtitle">
-                Explore original paintings through four collections
-            </p>
-
-            <a href="#collections" class="home-hero-button">
-                Explore Collections
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT STRIP -->
-    <section class="home-about-strip">
-
-        <p>
-            Original digital paintings inspired by emotion,
-            nature, the human body and personal experience.
-        </p>
-
-    </section>
-
-
-    <!-- COLLECTION TITLE -->
-    <section class="home-collections-heading" id="collections">
-
-        <p>THE COLLECTIONS</p>
-
-        <h2>
-            Explore the Art
-        </h2>
-
-    </section>
-
-
-    <!-- COLLECTIONS -->
-    <section class="home-collections">
-
-        <!-- WOMAN -->
-        <a href="woman.html" class="home-collection-card">
-
-            <div class="home-collection-image">
-
-                <img src="image/birth-God.jpg"
-                     alt="Woman Collection">
-
-            </div>
-
-            <div class="home-collection-info">
-
-                <h3>Woman</h3>
-
-                <p>
-                    Explore Collection
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <!-- NATURE -->
-        <a href="nature.html" class="home-collection-card">
-
-            <div class="home-collection-image">
-
-                <img src="image/Salzburg night.jpg"
-                     alt="Nature Collection">
-
-            </div>
-
-            <div class="home-collection-info">
-
-                <h3>Nature</h3>
-
-                <p>
-                    Explore Collection
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <!-- OCEAN -->
-        <a href="ocean.html" class="home-collection-card">
-
-            <div class="home-collection-image">
-
-                <img src="image/Ocean 2.jpg"
-                     alt="Ocean Collection">
-
-            </div>
-
-            <div class="home-collection-info">
-
-                <h3>Ocean</h3>
-
-                <p>
-                    Explore Collection
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <!-- INK -->
-        <a href="ink.html" class="home-collection-card">
-
-            <div class="home-collection-image">
-
-                <img src="image/1-1.jpg"
-                     alt="Ink Collection">
-
-            </div>
-
-            <div class="home-collection-info">
-
-                <h3>Ink</h3>
-
-                <p>
-                    Explore Collection
-                </p>
-
-            </div>
-
-        </a>
-
-    </section>
-
-
-    <!-- ARTIST STORY -->
-    <section class="home-story">
-
-        <div class="home-story-inner">
-
-            <p class="home-story-eyebrow">
-                THE ARTIST
-            </p>
-
-            <h2>
-                A Story Behind Every Painting
-            </h2>
-
-            <p>
-                Each collection is part of a personal journey through
-                the body, nature, the mind, fear and surrender.
-            </p>
-
-            <a href="story.html" class="home-story-link">
-                Read My Story
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="home-contact" id="contact">
-
-        <div class="home-contact-inner">
-
-            <p class="home-contact-eyebrow">
-                GET IN TOUCH
-            </p>
-
-            <h2>
-                Contact
-            </h2>
-
-            <p>
-                For artwork inquiries, collaborations or further information,
-                please feel free to contact me.
-            </p>
-
-            <div class="home-contact-details">
-
-                <a href="mailto:Parisaazizi.it@gmail.com">
-                    Parisaazizi.it@gmail.com
-                </a>
-
-                <a href="tel:+393518387774">
-                    +39 351 838 7774
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
+  <section class="home-hero">
+    <div class="home-hero-background" style="background-image:url('image/Head.jpg')"></div>
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-content">
+      <p class="eyebrow">ORIGINAL ART BY PARISA</p>
+      <h1>Art Made With<br>Emotion</h1>
+      <p class="home-hero-subtitle">Explore original paintings through four collections</p>
+      <a href="#collections" class="outline-button">Explore Collections</a>
+    </div>
+  </section>
+
+  <section class="home-about-strip">
+    <p>Original digital paintings inspired by emotion, nature, the human body and personal experience.</p>
+  </section>
+
+  <section class="home-collections-heading" id="collections">
+    <p class="eyebrow">THE COLLECTIONS</p>
+    <h2>Explore the Art</h2>
+  </section>
+
+  <section class="home-collections">
+    <a href="woman.html" class="home-collection-card">
+      <div class="home-collection-image"><img src="image/birth-God.jpg" alt="Woman collection"></div>
+      <div class="home-collection-info"><h3>Woman</h3><p>Explore Collection</p></div>
+    </a>
+
+    <a href="nature.html" class="home-collection-card">
+      <div class="home-collection-image"><img src="image/Salzburg night.jpg" alt="Nature collection"></div>
+      <div class="home-collection-info"><h3>Nature</h3><p>Explore Collection</p></div>
+    </a>
+
+    <a href="ocean.html" class="home-collection-card">
+      <div class="home-collection-image"><img src="image/Ocean 2.jpg" alt="Ocean collection"></div>
+      <div class="home-collection-info"><h3>Ocean</h3><p>Explore Collection</p></div>
+    </a>
+
+    <a href="ink.html" class="home-collection-card">
+      <div class="home-collection-image"><img src="image/1-1.jpg" alt="Ink collection"></div>
+      <div class="home-collection-info"><h3>Ink</h3><p>Explore Collection</p></div>
+    </a>
+  </section>
+
+  <section class="home-story">
+    <div class="home-story-inner">
+      <p class="eyebrow">THE ARTIST</p>
+      <h2>A Story Behind Every Painting</h2>
+      <p>Each collection is part of a personal journey through the body, nature, the mind, fear and surrender.</p>
+      <a href="story.html" class="text-link">Read My Story</a>
+    </div>
+  </section>
+
+  <section class="home-contact" id="contact">
+    <div class="home-contact-inner">
+      <div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Contact</h2>
+        <p>For artwork inquiries, collaborations or further information, please feel free to contact me.</p>
+      </div>
+
+      <div class="home-contact-details">
+        <a href="mailto:Parisaazizi.it@gmail.com">Parisaazizi.it@gmail.com</a>
+        <a href="tel:+393518387774">+39 351 838 7774</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-
-<footer class="home-footer">
-
-    <p>
-        © 2026 Parisa Art
-    </p>
-
-</footer>
-
+<footer class="site-footer">© 2026 Parisa Art</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

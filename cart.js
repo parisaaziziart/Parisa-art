@@ -1,279 +1,50 @@
-/* =========================================
-   CART DATA
-========================================= */
-
-let cart =
-    JSON.parse(
-        localStorage.getItem(
-            "parisaCart"
-        )
-    ) || [];
-
-
-
-/* =========================================
-   ELEMENTS
-========================================= */
-
-const cartItems =
-    document.getElementById(
-        "cart-items"
-    );
-
-
-const cartTotal =
-    document.getElementById(
-        "cart-total"
-    );
-
-
-const emptyCart =
-    document.getElementById(
-        "empty-cart"
-    );
-
-
-const cartSummary =
-    document.getElementById(
-        "cart-summary"
-    );
-
-
-const checkoutButton =
-    document.getElementById(
-        "checkout-button"
-    );
-
-
-
-/* =========================================
-   FORMAT PRICE
-========================================= */
-
-function formatPrice(price) {
-
-    return new Intl.NumberFormat(
-        "en-US",
-        {
-            style: "currency",
-            currency: "EUR"
-        }
-    ).format(price);
-
-}
-
-
-
-/* =========================================
-   SAVE CART
-========================================= */
-
-function saveCart() {
-
-    localStorage.setItem(
-        "parisaCart",
-        JSON.stringify(cart)
-    );
-
-}
-
-
-
-/* =========================================
-   REMOVE ITEM
-========================================= */
-
-function removeItem(index) {
-
-    cart.splice(
-        index,
-        1
-    );
-
-
-    saveCart();
-
-
-    renderCart();
-
-}
-
-
-
-/* =========================================
-   SHOW CART
-========================================= */
+const cartItemsEl = document.getElementById("cart-items");
+const cartTotalEl = document.getElementById("cart-total");
+const cartEmptyEl = document.getElementById("cart-empty");
+const cartContentEl = document.getElementById("cart-content");
 
 function renderCart() {
+  const cart = getCart();
 
-    cartItems.innerHTML = "";
+  if (!cart.length) {
+    cartEmptyEl.hidden = false;
+    cartContentEl.hidden = true;
+    updateCartCount();
+    return;
+  }
 
+  cartEmptyEl.hidden = true;
+  cartContentEl.hidden = false;
+  cartItemsEl.innerHTML = "";
 
-    if (
-        cart.length === 0
-    ) {
+  let total = 0;
 
-        emptyCart.style.display =
-            "block";
+  cart.forEach(item => {
+    total += Number(item.price) || 0;
 
+    const row = document.createElement("article");
+    row.className = "cart-item";
+    row.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div>
+        <h3>${item.name}</h3>
+        <p>€${Number(item.price).toLocaleString()}</p>
+      </div>
+      <button class="remove-item" type="button" data-id="${item.id}">Remove</button>
+    `;
 
-        cartSummary.style.display =
-            "none";
+    cartItemsEl.appendChild(row);
+  });
 
+  cartTotalEl.textContent = `€${total.toLocaleString()}`;
 
-        return;
-    }
-
-
-    emptyCart.style.display =
-        "none";
-
-
-    cartSummary.style.display =
-        "block";
-
-
-    let total = 0;
-
-
-    cart.forEach(
-        (item, index) => {
-
-
-            total +=
-                Number(
-                    item.price
-                );
-
-
-            const row =
-                document.createElement(
-                    "div"
-                );
-
-
-            row.className =
-                "cart-item";
-
-
-            row.innerHTML = `
-
-                <img
-                    class="cart-item-image"
-                    src="image/${item.file}"
-                    alt="${item.name}"
-                >
-
-
-                <div class="cart-item-info">
-
-                    <h3>
-                        ${item.name}
-                    </h3>
-
-                    <p>
-                        Original artwork by Parisa
-                    </p>
-
-                </div>
-
-
-                <div class="cart-item-price">
-
-                    ${formatPrice(item.price)}
-
-                </div>
-
-
-                <button
-                    class="remove-button"
-                    data-index="${index}"
-                >
-                    Remove
-                </button>
-
-            `;
-
-
-            cartItems.appendChild(
-                row
-            );
-
-        }
-    );
-
-
-    cartTotal.textContent =
-        formatPrice(total);
-
+  document.querySelectorAll(".remove-item").forEach(button => {
+    button.addEventListener("click", () => {
+      const updated = getCart().filter(item => item.id !== button.dataset.id);
+      saveCart(updated);
+      renderCart();
+    });
+  });
 }
 
-
-
-/* =========================================
-   REMOVE CLICK
-========================================= */
-
-cartItems.addEventListener(
-    "click",
-    event => {
-
-
-        const button =
-            event.target.closest(
-                ".remove-button"
-            );
-
-
-        if (!button) {
-            return;
-        }
-
-
-        removeItem(
-            Number(
-                button.dataset.index
-            )
-        );
-
-    }
-);
-
-
-
-/* =========================================
-   CHECKOUT
-========================================= */
-
-checkoutButton.addEventListener(
-    "click",
-    () => {
-
-
-        if (
-            cart.length === 0
-        ) {
-
-            alert(
-                "Your cart is empty."
-            );
-
-
-            return;
-        }
-
-
-        alert(
-            "The shopping cart is working. Secure payment will be connected next."
-        );
-
-    }
-);
-
-
-
-/* =========================================
-   START
-========================================= */
-
-renderCart();
+document.addEventListener("DOMContentLoaded", renderCart);
