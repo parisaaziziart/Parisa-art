@@ -437,3 +437,17 @@ body{font-size:15px}
   .story-article blockquote{font-size:1.28rem}
   .story-chapters,.story-final-chapters{font-size:1.45rem}
 }
+
+
+/* Stripe checkout state */
+.checkout-button.is-disabled{
+  opacity:.45;
+  pointer-events:none;
+  cursor:not-allowed;
+}
+.checkout-status{
+  margin:10px 0 0;
+  font-size:.76rem;
+  line-height:1.45;
+  color:#6b5c52;
+}

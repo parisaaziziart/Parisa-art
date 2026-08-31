@@ -35,8 +35,9 @@
     <aside class="cart-summary">
       <h2>Summary</h2>
       <div class="summary-line"><span>Subtotal</span><strong id="cart-total">€0</strong></div>
-      <p class="cart-note">Shipping and payment will be arranged securely after purchase confirmation.</p>
-      <a class="checkout-button" href="mailto:Parisaazizi.it@gmail.com?subject=Artwork%20purchase%20request">Contact to Purchase</a>
+      <p class="cart-note">Secure checkout is handled by Stripe. This version is connected to Stripe Sandbox for testing.</p>
+      <a class="checkout-button" id="checkout-button" href="#" aria-disabled="true">Proceed to Payment</a>
+      <p class="checkout-status" id="checkout-status" aria-live="polite"></p>
     </aside>
   </div>
 </main>
